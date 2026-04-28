@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Platinum Pools of Florida LLC</title>
+
+<meta name="description" content="Platinum Pools of Florida LLC - professional pool repairs, maintenance, and installations in Florida.">
+<meta name="keywords" content="pool service Florida, pool repair Plant City, pool maintenance Florida, pool installation Florida">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --blue:#0b4f8a;
+  --dark:#061f33;
+  --glass:rgba(255,255,255,0.08);
+  --accent:#d6b25e;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:Inter;}
+
+body{
+  color:white;
+  background:linear-gradient(rgba(3,25,45,0.65), rgba(3,25,45,0.65)),
+  url("https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=2000&q=80");
+  background-size:cover;
+  background-attachment:fixed;
+  overflow-x:hidden;
+}
+
+/* 🌊 WAVES */
+.wave{
+  position:fixed;
+  width:200%;
+  height:100%;
+  top:0;left:0;
+  background:url("https://svgshare.com/i/uQh.svg");
+  opacity:0.18;
+  animation:move 18s linear infinite;
+  z-index:0;
+}
+
+@keyframes move{
+  from{transform:translateX(0);}
+  to{transform:translateX(-50%);}
+}
+
+/* NAV */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  padding:12px;
+  background:rgba(6,25,40,0.85);
+  z-index:10;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-size:0.9rem;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  z-index:2;
+  padding:20px;
+}
+
+.hero h1{font-size:clamp(2rem,4vw,3.2rem);}
+.hero p{opacity:0.85;margin-top:10px;}
+.hero span{color:var(--accent);letter-spacing:2px;text-transform:uppercase;font-size:0.8rem;}
+
+/* SECTIONS */
+section{
+  max-width:1000px;
+  margin:auto;
+  padding:70px 15px;
+  position:relative;
+  z-index:2;
+}
+
+h2{margin-bottom:15px;}
+
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+  gap:12px;
+}
+
+.card{
+  background:var(--glass);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:14px;
+  padding:16px;
+  backdrop-filter:blur(10px);
+}
+
+/* INPUTS */
+input,select,textarea{
+  width:100%;
+  padding:10px;
+  margin-top:8px;
+  border-radius:10px;
+  border:none;
+}
+
+/* BUTTON */
+button{
+  width:100%;
+  margin-top:10px;
+  padding:10px;
+  background:var(--accent);
+  border:none;
+  border-radius:10px;
+  font-weight:600;
+  cursor:pointer;
+}
+
+/* CALENDAR UI */
+.calendar{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:5px;
+  margin-top:10px;
+}
+
+.day{
+  background:rgba(255,255,255,0.08);
+  padding:10px;
+  text-align:center;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.day:hover{
+  background:rgba(214,178,94,0.4);
+}
+
+/* MAP */
+iframe{
+  width:100%;
+  height:240px;
+  border:none;
+  border-radius:12px;
+  margin-top:10px;
+}
+
+/* CHAT */
+.chat-toggle{
+  position:fixed;
+  bottom:18px;
+  right:18px;
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  background:var(--accent);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:20;
+  cursor:pointer;
+}
+
+.chatbox{
+  position:fixed;
+  bottom:80px;
+  right:18px;
+  width:280px;
+  background:rgba(0,0,0,0.9);
+  border:1px solid var(--accent);
+  border-radius:12px;
+  display:none;
+  flex-direction:column;
+  z-index:20;
+}
+
+.chat-header{
+  background:var(--blue);
+  padding:10px;
+  text-align:center;
+}
+
+.chat-body{
+  height:150px;
+  overflow-y:auto;
+  padding:10px;
+  font-size:0.8rem;
+}
+
+.chat-input{display:flex;}
+.chat-input input{flex:1;border-radius:0;}
+.chat-input button{border-radius:0;width:auto;}
+</style>
+</head>
+
+<body>
+
+<div class="wave"></div>
+
+<nav>
+<a href="#services">Services</a>
+<a href="#booking">Booking</a>
+<a href="#quote">Quote</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<div class="hero">
+  <span>Welcome to Platinum Pools</span>
+  <h1>Platinum Pools of Florida LLC</h1>
+  <p>Clean water. Clean work. Built with precision.</p>
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+<h2>Services</h2>
+<div class="grid">
+  <div class="card">Repairs — fixing leaks and systems.</div>
+  <div class="card">Maintenance — clean, balanced water care.</div>
+  <div class="card">Installations — full pool construction.</div>
+</div>
+</section>
+
+<!-- BOOKING + CALENDAR -->
+<section id="booking">
+<h2>Booking Calendar</h2>
+
+<div class="card">
+
+<input id="name" placeholder="Name">
+<input id="phone" placeholder="Phone">
+<input id="email" placeholder="Email">
+
+<select id="service">
+  <option>Repairs</option>
+  <option>Maintenance</option>
+  <option>Installations</option>
+</select>
+
+<textarea id="details" placeholder="Request details"></textarea>
+
+<button onclick="book()">Book Appointment</button>
+
+<div class="calendar" id="calendar"></div>
+
+</div>
+</section>
+
+<!-- QUOTE -->
+<section id="quote">
+<h2>Instant Quote</h2>
+
+<div class="card">
+
+<select id="type">
+  <option value="150">Maintenance</option>
+  <option value="400">Repairs</option>
+  <option value="2500">Installations</option>
+</select>
+
+<input id="size" type="number" placeholder="Pool Size (sq ft)">
+
+<button onclick="calc()">Calculate</button>
+
+<p id="result" style="margin-top:10px;color:var(--accent);"></p>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+
+<div class="card">
+<p>(813) 614-1122</p>
+<p>platinumpools24@gmail.com</p>
+
+<button onclick="map()">Directions</button>
+
+<iframe src="https://www.google.com/maps?q=Plant+City+FL+33565&output=embed"></iframe>
+</div>
+</section>
+
+<!-- CHAT -->
+<div class="chat-toggle" onclick="toggleChat()">💬</div>
+
+<div class="chatbox" id="chatbox">
+  <div class="chat-header">Assistant</div>
+  <div class="chat-body" id="chat"></div>
+  <div class="chat-input">
+    <input id="msg">
+    <button onclick="chat()">Send</button>
+  </div>
+</div>
+
+<script>
+
+/* 🌊 SIMPLE CALENDAR */
+const cal = document.getElementById("calendar");
+for(let i=1;i<=30;i++){
+  let d=document.createElement("div");
+  d.className="day";
+  d.innerText=i;
+  d.onclick=()=>alert("Selected day: "+i);
+  cal.appendChild(d);
+}
+
+/* BOOKING */
+function book(){
+  alert("Booking sent. We will contact you soon.");
+}
+
+/* QUOTE */
+function calc(){
+  let base=Number(type.value);
+  let size=Number(document.getElementById("size").value||0);
+  result.innerText="Estimated: $"+(base+size*0.5).toFixed(2);
+}
+
+/* MAP */
+function map(){
+  window.open("https://www.google.com/maps/dir/?api=1&destination=Plant+City+FL");
+}
+
+/* CHAT */
+function toggleChat(){
+  chatbox.style.display = chatbox.style.display==="flex"?"none":"flex";
+}
+
+function chat(){
+  let t=msg.value.toLowerCase();
+  let r="I’m here.";
+
+  if(t.includes("repair")) r="We fix what water breaks.";
+  if(t.includes("install")) r="We build pools from silence.";
+  if(t.includes("maintenance")) r="We keep water alive.";
+
+  chat.innerHTML+=`<div>You: ${msg.value}</div>`;
+  chat.innerHTML+=`<div style="color:#d6b25e;">Bot: ${r}</div>`;
+  msg.value="";
+}
+</script>
+
+</body>
+</html>
