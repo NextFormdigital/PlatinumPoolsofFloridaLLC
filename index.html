@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Platinum Pools of Florida LLC</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #f4faff;
+        color: #0a2540;
+    }
+
+    nav {
+        position: sticky;
+        top: 0;
+        background: #0a2540;
+        padding: 12px;
+        text-align: center;
+        z-index: 10;
+    }
+
+    nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    header {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        background:
+            linear-gradient(rgba(0,40,80,0.6), rgba(0,20,50,0.8)),
+            url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e')
+            center/cover no-repeat;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        max-width: 900px;
+    }
+
+    header p {
+        margin-top: 10px;
+        opacity: 0.9;
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 70px 20px;
+        text-align: center;
+    }
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    .services {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 300px;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+
+    button {
+        margin-top: 10px;
+        padding: 10px;
+        border: none;
+        background: #0077cc;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .hidden {
+        display: none;
+        margin-top: 10px;
+        font-size: 0.95rem;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .gallery img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .gallery p {
+        margin-top: 8px;
+        font-weight: bold;
+    }
+
+    form {
+        max-width: 500px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    input, select, textarea {
+        padding: 12px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+
+    footer {
+        background: #0a2540;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    a {
+        color: #0077cc;
+    }
+</style>
+</head>
+
+<body>
+
+<nav>
+    <a href="#services">Services</a>
+    <a href="#gallery">Work</a>
+    <a href="#book">Book</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<header>
+    <div>
+        <h1>Platinum Pools of Florida LLC</h1>
+        <p>Clean water. Expert care. Built for Florida living.</p>
+    </div>
+</header>
+
+<section id="services">
+    <h2>Our Pool Services</h2>
+
+    <div class="services">
+
+        <div class="card">
+            <h3>Pool Repairs</h3>
+            <button onclick="toggle('r')">What this means</button>
+            <p id="r" class="hidden">
+                Fixing leaks, pumps, filters, circulation issues, and damaged pool systems.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Pool Maintenance</h3>
+            <button onclick="toggle('m')">What this means</button>
+            <p id="m" class="hidden">
+                Cleaning, brushing, chemical balancing, and keeping your pool crystal clear.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Pool Installations</h3>
+            <button onclick="toggle('i')">What this means</button>
+            <p id="i" class="hidden">
+                Full pool setups, equipment installs, and system upgrades from start to finish.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>Pool Work in Action</h2>
+
+    <div class="gallery">
+
+        <div>
+            <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21" alt="Pool Maintenance">
+            <p>Pool Maintenance</p>
+        </div>
+
+        <div>
+            <img src="https://images.unsplash.com/photo-1572331165267-854da2b10ccc" alt="Pool Installation">
+            <p>Pool Installation</p>
+        </div>
+
+        <div>
+            <img src="https://images.unsplash.com/photo-1615873968403-89e068629265" alt="Pool Repairs">
+            <p>Pool Repairs</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="book">
+    <h2>Book a Service</h2>
+
+    <form action="https://formspree.io/f/YOUR-ID" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+
+        <select name="service">
+            <option>Pool Repairs</option>
+            <option>Pool Maintenance</option>
+            <option>Pool Installations</option>
+        </select>
+
+        <textarea name="message" placeholder="Describe your pool needs"></textarea>
+
+        <button type="submit">Submit Request</button>
+    </form>
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+
+    <p>
+        📍 <a href="https://www.google.com/maps?q=Paul+Buchman+Hwy+Plant+City+FL+33565" target="_blank">
+        Paul Buchman Hwy, Plant City, FL 33565</a>
+    </p>
+
+    <p>📞 <a href="tel:18136141122">(813) 614-1122</a></p>
+    <p>📧 <a href="mailto:platinumpools24@gmail.com">platinumpools24@gmail.com</a></p>
+    <p>🕒 Always Open</p>
+</section>
+
+<footer>
+    © 2026 Platinum Pools of Florida LLC
+</footer>
+
+<script>
+function toggle(id){
+    document.getElementById(id).classList.toggle("hidden");
+}
+</script>
+
+</body>
+</html>
